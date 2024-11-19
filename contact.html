@@ -38,7 +38,7 @@
                         <a href="gallery.html" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link active">Contact Me</a>
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -107,6 +107,21 @@
             </div>
         </section>
         
+        <section class="quiz-section">
+            <h2>Now... Take the Quiz!</h2>
+            <div class="questions">
+                <!-- Questions will dynamically populate here -->
+            </div>
+            <div class="results">
+                <h2>Results</h2>
+                <p>You got <span id="correct">0</span> out of <span id="total">0</span> correct!</p>
+                <button id="restart">Restart Quiz</button>
+            </div>
+        </section>
+        
+        
+    
+        
     </main>
 
     <footer>
@@ -131,6 +146,131 @@
         </div>
     </footer>
 
+    <script>
+        // Quiz Data
+const quizData = [
+    {
+        question: "How many parfumes are there in our gallery?",
+        answers: [
+            { text: "50+", correct: false },
+            { text: "4", correct: true },
+            { text: "15", correct: false },
+            { text: "1", correct: false },
+        ],
+    },
+    {
+        question: "What is the most pricey parfume in our gallery?",
+        answers: [
+            { text: "Ombre Nomade Louis Vuitton", correct: true },
+            { text: "Dior Homme Intense", correct: false },
+            { text: "Tom Ford Ombre Leather", correct: false },
+            { text: "Emporio Armani Stronger With You", correct: false },
+        ],
+    },
+    {
+        question: "Where are we located?",
+        answers: [
+            { text: "Almaty", correct: false },
+            { text: "Astana", correct: true },
+            { text: "London", correct: false },
+            { text: "Semey", correct: false },
+        ],
+    },
+    {
+        question: "What scent does Dior Homme Intense consist of?",
+        answers: [
+            { text: "Floral", correct: false },
+            { text: "Woody", correct: true },
+            { text: "Fruity", correct: false },
+            { text: "Citrus", correct: false },
+        ],
+    },
+    {
+        question: "Did you like our website?",
+        answers: [
+            { text: "Of course I will put you 100 out of 100!", correct: true },
+            { text: "um.. Actually it is really bad!", correct: false },
+            { text: "It's OK!", correct: false },
+            { text: "I'd rather not to answer.", correct: false },
+        ],
+    },
+];
+
+// Select HTML elements
+const questionContainer = document.querySelector(".questions");
+const resultsContainer = document.querySelector(".results");
+const restartButton = document.querySelector("#restart");
+const totalSpan = document.querySelector("#total");
+const correctSpan = document.querySelector("#correct");
+
+let currentQuestionIndex = 0;
+let numCorrect = 0;
+
+// Display the first question
+function showQuestion() {
+    const currentQuestion = quizData[currentQuestionIndex];
+    questionContainer.innerHTML = `
+        <p>${currentQuestion.question}</p>
+        <ul>
+            ${currentQuestion.answers
+                .map(
+                    (answer) => `
+                <li>
+                    <button class="answer-btn">${answer.text}</button>
+                </li>
+            `
+                )
+                .join("")}
+        </ul>
+    `;
+
+    const answerButtons = document.querySelectorAll(".answer-btn");
+    answerButtons.forEach((button) =>
+        button.addEventListener("click", checkAnswer)
+    );
+}
+
+// Check the selected answer
+function checkAnswer(e) {
+    const selectedButton = e.target;
+    const isCorrect = quizData[currentQuestionIndex].answers.find(
+        (answer) => answer.text === selectedButton.textContent
+    ).correct;
+
+    if (isCorrect) {
+        numCorrect++;
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex === quizData.length) {
+        showResults();
+    } else {
+        showQuestion();
+    }
+}
+
+// Display the results
+function showResults() {
+    questionContainer.style.display = "none";
+    resultsContainer.style.display = "block";
+    totalSpan.textContent = quizData.length;
+    correctSpan.textContent = numCorrect;
+}
+
+// Restart the quiz
+restartButton.addEventListener("click", () => {
+    currentQuestionIndex = 0;
+    numCorrect = 0;
+    questionContainer.style.display = "block";
+    resultsContainer.style.display = "none";
+    showQuestion();
+});
+
+// Initialize the quiz
+document.addEventListener("DOMContentLoaded", showQuestion);
+
+    </script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
