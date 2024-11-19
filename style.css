@@ -1,0 +1,553 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+body{
+    padding: 0%;
+    margin:0%;
+    font-family:'Lato';
+} 
+html{
+    scroll-behavior: smooth;
+}
+.navbar-brand{
+    font-family: 'Righteous';
+    font-size:35px;
+    color: lightcoral !important;   
+}
+
+.nav-link{
+    font-size: 16px;
+    margin: 15px;
+    color: black !important;
+    font-family: 'Roboto Condensed';
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for size and color */
+
+}
+
+
+.active .nav-link:hover{
+    color: #B8860B !important;
+}
+
+.menu-right-btn:hover{
+    color:white;
+    background-color: #B8860B;
+}
+
+.nav-link:hover {
+    transform: scale(1.1); /* Makes the nav item 10% bigger */
+    color: #B8860B !important; /* Changes color on hover */
+}
+
+.navbar-collapse {
+    justify-content: flex-start; /* Aligns the navbar items closer to the left */
+    transform: translateX(-5%); /* Moves the entire navbar menu slightly left */
+}
+
+.site-content {
+    position: relative;
+    background-image: url('pics/main1.1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10%; 
+    overflow: hidden;
+}
+
+.site-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 111%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+.site-title,
+.site-desc,
+.button-container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.site-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 80px;
+    color:  #B8860B;
+    font-family: 'Righteous';
+}
+
+.site-desc {
+    font-size: 25px;
+    padding-left: 0;
+    color: #B8860B;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-container .btn {
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+
+.site-btn1, .site-btn2 {
+    padding: 1rem 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.site-btn1 {
+    background-color: black;
+    color: white;
+}
+
+.site-btn2 {
+    background-color: white;
+    color: black;
+}
+
+/* Section-1 */
+.section-1 .heading-1 {
+    margin-top: 8%;
+}
+
+.section-1 .heading-2 {
+    margin-bottom: 5%;
+    font-size: 39px;
+}
+
+.section-1 .para-1 {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.section-1 .card-text, .para-1 {
+    color: rgba(0, 0, 0, 0.59);
+}
+
+.section-1{
+    margin-bottom: 8%;
+}
+.section-1 .card-img-top {
+    width: 100%; /* Ensures image fits the width of the card */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the center part of the image is displayed */
+    object-position: center; /* Focuses on the center of the image */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow effect */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Makes the card 10% bigger */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow for a lifted effect */
+}
+
+
+/* Footer */
+footer .section-5 {
+    font-family: 'Lato'; /* Replace with your desired font */
+    font-size: 16px;
+    color: #584107; /* Dark gray for better readability */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 1rem 0; /* Adds vertical padding */
+}
+
+.social i{
+    color:#584107;
+    font-size: 20px;
+}
+
+/* Section 2 */
+.section-2 .container-fluid {
+    position: relative;
+    background-image: url('pics/perfume.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center -400px;
+}
+
+.section-2 .container-fluid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.section-2 .heading-1,
+.section-2 .para,
+.section-2 .btn {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+}
+
+.section-2 .heading-1 {
+    margin-top: 20%;
+    margin-bottom: 1rem;
+    font-family: 'Righteous';
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    word-wrap: break-word;
+    width: 60%;
+}
+
+.section-2 .para {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+    word-wrap: break-word;
+    width: 60%;
+}
+
+.section-2 .btn {
+    align-self: center;
+    width: 15%;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    margin-top: 0;
+    text-align: center;
+}
+
+.section-2 .btn:hover {
+    background-color: #B8860B;
+}
+
+.section-2 .d-flex.flex-column {
+    align-items: flex-end;
+    gap: 1rem;
+}
+.btn-danger:active {
+    transform: scale(0.95); /* Button shrinks slightly on click */
+    transition: transform 0.1s ease-in-out;
+}
+
+#scrollToSlider {
+    transition: transform 0.2s ease-in-out; /* Smooth transition for all hover effects */
+}
+
+
+/* Fade-out animation */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#fragrance-slider {
+    padding: 4rem 0;
+    background-color: var(--bg);
+}
+
+.fragrance-slider {
+    height: 52rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+@media (max-width: 500px) {
+    .fragrance-slider {
+        height: 45rem;
+    }
+}
+
+.fragrance-slide {
+    width: 37rem;
+    height: 42rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .fragrance-slide {
+        width: 28rem;
+        height: 36rem;
+    }
+
+    .fragrance-slide img {
+        width: 28rem;
+        height: 36rem;
+    }
+}
+
+.fragrance-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fragrance-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+}
+
+.fragrance-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.fragrance-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.fragrance-rating {
+    display: flex;
+    gap: 1rem;
+}
+
+.rating ion-icon {
+    color: #ec994b; /* Change as needed */
+}
+
+/* Swiper Controls */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-pagination-bullet-active {
+    background: #ec994b;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: url(pics/bg.jpg);
+    background-attachment: fixed;
+
+    background-size: cover;
+}
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+}
+
+.contact > * {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+}
+.contact h2, .contact p {
+    color: white; /* Ensures good contrast against the dark overlay */
+}
+.contact .icon {
+    color: black; /* Example for icons */
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Righteous;
+}
+
+.contact .content p {
+    font-size: 22px;
+    color: #fff;
+    font-family: Lato;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Control the space between columns */
+    margin-top: 30px;
+}
+
+.container2 .contactInfo {
+    width: 48%; /* Reduce the width for balance */
+    display: flex;
+    flex-direction: column;
+}
+
+.container2 .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container2 .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container2 .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    font-family: Lato;
+}
+
+.container2 .contactInfo .box .text h3 {
+    font-size: 35px;
+    color: #B8860B;
+    font-family: Righteous;
+}
+
+.contactForm {
+    width: 35%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-family: Lato;
+
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    font-family: Lato;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    font-family: Lato;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #B8860B;
+    font-size: 12px;
+    font-family: Lato;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #B8860B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Lato;
+}

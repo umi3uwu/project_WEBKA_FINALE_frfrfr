@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (2)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io (2)/site.webmanifest">
+</head>
+
+<body class="fade-in">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="index.html" class="navbar-brand ms-3"><span style="color: #B8860B;">Fragr</span><span style="color: #32b40a;">Umi</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse"> </div>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link  active">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    
+
+    <main>
+        <div class="section-2">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-end">
+                    <div class="d-flex flex-column text-end m-4">
+                        <h1 class="heading-1">Gallery & Recommendations Page</h1>
+                        <p class="para">
+                            Here you are able to see the most popular and suitable fragrances for this winter with its main scents and price.
+                        </p>
+                        <input type="button" value="Show" class="btn btn-danger" id="scrollToSlider">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="fragrance-slider">
+            <div class="container">
+                <h3 class="text-center section-subheading">- Popular Fragrances -</h3>
+                <h1 class="text-center section-heading">Trending Scents</h1>
+            </div>
+            <div class="container">
+                <div class="swiper fragrance-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide fragrance-slide">
+                            <div class="fragrance-slide-img">
+                                <img src="pics/slider3.jpg" alt="Fragrance">
+                            </div>
+                            <div class="fragrance-slide-content">
+                                <h1 class="fragrance-price">$420</h1>
+                                <div class="fragrance-slide-content-bottom">
+                                    <h2 class="fragrance-name">
+                                        Ombre Nomade Louis Vuitton
+                                    </h2>
+                                    <h3 class="fragrance-rating">
+                                        <span>amber oud rose</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more slides similarly -->
+                        <div class="swiper-slide fragrance-slide">
+                            <div class="fragrance-slide-img">
+                                <img src="pics/slider2.jpg" alt="Fragrance">
+                            </div>
+                            <div class="fragrance-slide-content">
+                                <h1 class="fragrance-price">$100</h1>
+                                <div class="fragrance-slide-content-bottom">
+                                    <h2 class="fragrance-name">
+                                        Dior Homme Intense
+                                    </h2>
+                                    <h3 class="fragrance-rating">
+                                        <span>iris woody violet</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide fragrance-slide">
+                            <div class="fragrance-slide-img">
+                                <img src="pics/slider1.jpg" alt="Fragrance">
+                            </div>
+                            <div class="fragrance-slide-content">
+                                <h1 class="fragrance-price">$150</h1>
+                                <div class="fragrance-slide-content-bottom">
+                                    <h2 class="fragrance-name">
+                                        Tom Ford Ombre Leather
+                                    </h2>
+                                    <h3 class="fragrance-rating">
+                                        <span>leather animalic smoky</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide fragrance-slide">
+                            <div class="fragrance-slide-img">
+                                <img src="pics/slider4.jpg" alt="Fragrance">
+                            </div>
+                            <div class="fragrance-slide-content">
+                                <h1 class="fragrance-price">$95</h1>
+                                <div class="fragrance-slide-content-bottom">
+                                    <h2 class="fragrance-name">
+                                        Emporio Armani Stronger With You
+                                    </h2>
+                                    <h3 class="fragrance-rating">
+                                        <span>vanilla sweet amber</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider controls -->
+                    <div class="fragrance-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-button-next slider-arrow">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="section-5 text-center py-3">
+            <div class="social" style="margin:1%;">
+                <div class="d-flex flex-row justify-content-center">
+                    <a href="https://www.facebook.com/JeremyFragrance/" target="_blank" class="m-2" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/JeremyFragrance" target="_blank" class="m-2" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/jeremyfragrance" target="_blank" class="m-2" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@jeremyfragrance" target="_blank" class="m-2" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <h5>2024 Made by umi3awa &copy;</h5>
+        </div>
+    </footer>
+
+    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
